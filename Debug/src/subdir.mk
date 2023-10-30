@@ -1,0 +1,40 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/main_RFID.c \
+../src/syscalls.c \
+../src/system_stm32f4xx.c \
+../src/tm_stm32f4_gpio.c \
+../src/tm_stm32f4_mfrc522.c \
+../src/tm_stm32f4_spi.c 
+
+OBJS += \
+./src/main_RFID.o \
+./src/syscalls.o \
+./src/system_stm32f4xx.o \
+./src/tm_stm32f4_gpio.o \
+./src/tm_stm32f4_mfrc522.o \
+./src/tm_stm32f4_spi.o 
+
+C_DEPS += \
+./src/main_RFID.d \
+./src/syscalls.d \
+./src/system_stm32f4xx.d \
+./src/tm_stm32f4_gpio.d \
+./src/tm_stm32f4_mfrc522.d \
+./src/tm_stm32f4_spi.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU GCC Compiler'
+	@echo $(PWD)
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F429ZITx -DNUCLEO_F429ZI -DDEBUG -DSTM32F429_439xx -DUSE_STDPERIPH_DRIVER -I"C:/Users/carri/workspace/RFID-test/StdPeriph_Driver/inc" -I"C:/Users/carri/workspace/RFID-test/inc" -I"C:/Users/carri/workspace/RFID-test/CMSIS/device" -I"C:/Users/carri/workspace/RFID-test/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
