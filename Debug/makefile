@@ -28,6 +28,7 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
+<<<<<<< HEAD
 all: Final_v1.elf
 
 # Tool invocations
@@ -35,6 +36,15 @@ Final_v1.elf: $(OBJS) $(USER_OBJS) C:\Users\carri\workspace\Final_v1/LinkerScrip
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
 	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/carri/workspace/Final_v1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Final_v1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+=======
+all: RFID-test.elf
+
+# Tool invocations
+RFID-test.elf: $(OBJS) $(USER_OBJS) C:\Users\carri\workspace\RFID-test/LinkerScript.ld
+	@echo 'Building target: $@'
+	@echo 'Invoking: MCU GCC Linker'
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/carri/workspace/RFID-test/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "RFID-test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -46,8 +56,13 @@ clean:
 
 post-build:
 	-@echo 'Generating binary and Printing size information:'
+<<<<<<< HEAD
 	arm-none-eabi-objcopy -O binary "Final_v1.elf" "Final_v1.bin"
 	arm-none-eabi-size "Final_v1.elf"
+=======
+	arm-none-eabi-objcopy -O binary "RFID-test.elf" "RFID-test.bin"
+	arm-none-eabi-size "RFID-test.elf"
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355
 	-@echo ' '
 
 .PHONY: all clean dependents

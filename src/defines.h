@@ -1,15 +1,25 @@
 /**
  *  Defines for your entire project at one place
  * 
+<<<<<<< HEAD
  *	@author 	Tilen Majerle
  *	@email		tilen@majerle.eu
  *	@website	http://stm32f4-discovery.com
+=======
+ *	@author 	Tilen MAJERLE
+ *	@email		tilen@majerle.eu
+ *	@website	http://stm32f4-discovery.net
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355
  *	@version 	v1.0
  *	@ide		Keil uVision 5
  *	@license	GNU GPL v3
  *	
  * |----------------------------------------------------------------------
+<<<<<<< HEAD
  * | Copyright (C) Tilen Majerle, 2014
+=======
+ * | Copyright (C) Tilen MAJERLE, 2014
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355
  * | 
  * | This program is free software: you can redistribute it and/or modify
  * | it under the terms of the GNU General Public License as published by
@@ -30,6 +40,7 @@
 
 /* Put your global defines for all libraries here used in your project */
 
+<<<<<<< HEAD
 #endif
 
 #define FATFS_USE_SDIO   0
@@ -44,3 +55,10 @@
 #define TM_DELAY_TIM				TIM2
 #define TM_DELAY_TIM_IRQ			TIM2_IRQn
 #define TM_DELAY_TIM_IRQ_HANDLER	TIM2_IRQHandler
+=======
+/* Increase SPI5 SCK speed for ILI9341 on STM32F429 discovery board */
+#define TM_SPI5_PRESCALER	SPI_BaudRatePrescaler_2
+
+#endif
+
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355

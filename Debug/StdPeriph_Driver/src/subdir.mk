@@ -144,7 +144,11 @@ StdPeriph_Driver/src/%.o: ../StdPeriph_Driver/src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
+<<<<<<< HEAD
 	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F429ZITx -DNUCLEO_F429ZI -DDEBUG -DSTM32F429_439xx -DUSE_STDPERIPH_DRIVER -I"C:/Users/carri/workspace/Final_v1/StdPeriph_Driver/inc" -I"C:/Users/carri/workspace/Final_v1/inc" -I"C:/Users/carri/workspace/Final_v1/CMSIS/device" -I"C:/Users/carri/workspace/Final_v1/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+=======
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F429ZITx -DNUCLEO_F429ZI -DDEBUG -DSTM32F429_439xx -DUSE_STDPERIPH_DRIVER -I"C:/Users/carri/workspace/RFID-test/StdPeriph_Driver/inc" -I"C:/Users/carri/workspace/RFID-test/inc" -I"C:/Users/carri/workspace/RFID-test/CMSIS/device" -I"C:/Users/carri/workspace/RFID-test/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+>>>>>>> e5ce884e878d93d805d1f734fd25e2075f59e355
 	@echo 'Finished building: $<'
 	@echo ' '
 
